@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 2rem auto;
+  max-width: 1280px;
+  padding: 1rem;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(10, 10, 75, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(10, 10, 75, 0.25);
+}
+
+.recipe img {
+  width: 100%;
+  max-width: 150px;   /* limit image width */
+  height: 150px;      /* fix height */
+  object-fit: cover;  /* crop nicely without stretching */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.recipe h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.recipe p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.recipe button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.recipe button:hover {
+  background-color: #218838;
+}
